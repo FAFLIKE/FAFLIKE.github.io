@@ -1,0 +1,480 @@
+/* У меня разрешение жкрана сильео отличаеться от разрешения макета. Пока нет адаптивности - делал на глаз*/
+
+
+
+.container {
+    max-width: 998px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button{
+    border: 2px solid #d1dcee;
+    border-radius: 5px;
+    height: 40px;
+    text-align: center;
+    color:  #d1dcee;
+    padding: 12px 16px 12px 16px;
+    font-weight: bold;
+
+}
+
+.button:visited{
+    color:  #d1dcee;
+}
+
+.block{
+    padding-top: 7.5%;
+    text-align: center;
+}
+
+.title{
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+}
+
+.stick{
+    margin: auto;
+    border-bottom: 4px solid #EB7800;
+    width: 70px;
+
+}
+
+
+.header{
+    width: 100%;
+    height: 60px;
+    background: #15263d;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 60px;
+}
+
+.header__logo{
+    font-size: 23px;
+    margin-left: 388px;
+    color: white;
+    float: left;
+}
+
+.header__menu{
+    font-size: 14px;
+    float: right;
+    margin-right: 432px;
+}
+
+.header__li{
+    float: left;
+    margin-left: 36px;
+}
+
+.header__button{
+    font-weight: bold;
+    text-transform: uppercase;    
+    color: white;
+}
+.header__button:visited{
+    color:  white;
+}
+.main{
+    min-height: 100%;
+    background: url(../img/bardcolor.png) calc(100% + 150px) top/auto no-repeat, url(../img/main_bg.png) center/cover no-repeat;
+}
+
+.main__container{
+    float:left;
+    margin-left: 11%;
+    margin-top: 24%;
+    text-align: center;
+}
+
+.main__title{
+    color: #94b0da;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.main__text{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color:  #d1dcee;
+}
+
+.main__buttons{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.main__button{
+    margin: 0 14px 0 14px;
+}
+
+
+
+
+.about{
+    /* min-height: 70.6%; */
+    background: white;
+    box-shadow: 0px -20px 20px #00000069;
+}
+
+.about__avatar{
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 22px;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    filter: grayscale(100);
+    background: url(../img/bardcolor.png) center top+30px  no-repeat, #eff0f4;
+    background-size: 280px;
+}
+.about__text{
+    margin: auto;
+    margin-bottom: 34px;
+    width: 747px;
+    text-align: left;
+}
+
+.about__buttons{
+    height: 97px;
+}
+
+.about__button{
+    margin-bottom: 97px;
+ color: #6f707e;
+    border-color:#6f707e;
+}
+
+.download_ico{
+    width: 16px;
+    filter: invert(0.45);
+}
+
+
+
+
+.iCan{
+    background: url(../img/iCan_bg.png) center/cover no-repeat;
+}
+
+.iCan__list{
+    display:block;
+    margin-top: 105px;
+}
+
+.iCan__element{
+    display: inline-block;
+    width: 215px;
+    margin-bottom: 90px;
+}
+
+.iCan__img{
+    width: 53px;
+}
+
+.iCan_title{
+    margin-top: 36px;
+    margin-bottom: 20px;
+    color:#EB7800;
+    font-size: 14px;
+}
+
+.iCan__info{
+    color: #3f495a;
+    
+}
+
+
+
+
+.cases__text{
+    margin-top: 36px;
+    margin-bottom: 40px;
+}
+
+
+.case{
+    width: 1170px;
+    margin: 0 auto 0 auto;
+}
+
+.case_block{
+    margin-top: 40px;
+    margin-bottom: 25px;
+    
+    text-align: left;
+    color: #3f495a;
+}
+
+.block_left, .block_right{
+    display: inline-block;
+    
+}
+
+.block_left{
+    width: 200px;
+}
+
+.block_right{
+    width: 880px;
+    margin-left: 45px;
+    vertical-align: top;
+}
+
+.case__title{
+    text-transform: uppercase;
+    font-size: 21px;
+    margin-bottom: 17px;
+}
+
+.case__text{
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+.visit{
+    display: block;
+    text-align: left;
+    margin-left: 0px;
+}
+
+.visit_button{
+    border-color: #00B6AF;
+    background-color: #00B6AF;
+    font-size: 21px;
+    color: white;
+    text-transform: uppercase;
+    padding: 12px 51px 12px 51px;
+}
+
+
+
+
+.calculation_form{
+    width: 890px;
+    display: block;
+    margin: 0 auto 0 auto;
+    text-align: left;
+    color: #1c2534;
+}
+
+.list{
+    width: 100%;
+    height: 60px;
+    padding: 0 24px 0px 24px;
+    margin-bottom: 10px;
+    background-color: #eeeeee;
+    border: 1px solid #eeeeee;
+    color: #737373;
+}
+
+.form_title{
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.calculation__stick{
+    border-bottom: 2px solid #d1d1d1;
+    width: 890px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.right_calc{
+    float:right
+}
+
+.calc_endText{
+    font-size: 19px;
+}
+
+.calc_time{
+    margin-bottom: 20px;
+}
+
+.calc_price{
+    margin-bottom: 150px;
+}
+
+
+
+.statistics{
+    background: url(../img/statistics_bg.png) center/cover no-repeat;
+}
+
+.statistics_list{
+    display: inline-block;
+    margin: 0 auto 100px auto;
+    
+}
+
+.statistics_icon{
+    width: 60px;
+    margin: 0 127px 0 127px;
+    filter: hue-rotate(36deg) brightness(4);
+}
+
+.statistics_icon_trophy{
+    filter: hue-rotate(-20deg) saturate(2);
+}
+
+.statistic_item{
+    float:left;
+    color: #323e4f;
+}
+
+.stat_number{
+    margin: 30px 0 30px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.stat_text{
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+.reviews_container{
+    margin-top: 60;
+}
+
+.review_img{
+    width: 100px;
+    border: #0000;
+    border-radius: 50px;
+    background-color: lightgray;
+    margin-bottom: 35px;
+}
+
+.review_text{
+    margin-bottom: 30px;
+}
+.review_title{
+    margin-bottom: 50px;
+}
+
+.tipo_slider{
+    width: 110px;
+    border-bottom: 10px dotted #EB7800;
+    margin-bottom: 90px;
+}
+
+
+
+.contacts{
+    background: url(../img/contacts_bg.png) center/cover no-repeat;
+    /* На картинке из макета нарисованны значки. Нашёл оригинал картинки без значков. 
+    В паинте ресайзнул и перекрасил с использованием сепии (ориг черно-белый) */
+    color: white;
+    
+}
+
+.contacts__stick{
+    margin-bottom: 30px;
+}
+
+.contacts__text{
+    margin-bottom: 48px;
+}
+
+.contacts_container{
+    color: white;
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 40px;
+
+}
+
+.contact_ico{
+    width: 30px;
+    filter: brightness(0) invert();
+}
+
+.contact{
+    display: inline-block;
+    margin:  0 110px 0 110px;
+    vertical-align: top;
+}
+
+.send_msg{
+    font-size: 21px;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+}
+
+.form{
+    width: 735px;
+    margin: auto;
+    padding: 0px;
+}
+
+.form_name{
+    padding-left: 13px;
+    width: 355px;
+    height: 35px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.form_email{
+    padding-left: 13px;
+    width: 355px;
+    height: 35px;
+    float: right;    
+    margin-bottom: 15px;
+}
+
+.textarea{
+    padding-left: 13px;
+    padding-top: 10px;
+    width: 100%;
+    height: 95px;
+    margin-bottom: 30px;
+}
+
+.send_message{
+    text-align: center;
+    line-height: 0px;
+    background: transparent;
+    margin-bottom: 75px;
+}
+
+.social_links{
+    padding-bottom: 65px;
+}
+
+.link{
+    display: inline-block;
+    margin: 0 25px 0 25px;
+}
+
+.map{
+    padding-top: 0;
+}
+
+footer{
+    display: block;
+    height: 95px;
+    background-color: #354051;
+    color: white;
+    font-size: 16px;
+}
+.footer_text{
+    text-align: center;
+    line-height: 95px;
+}
