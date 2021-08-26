@@ -1,34 +1,160 @@
 /* У меня разрешение жкрана сильео отличаеться от разрешения макета. Пока нет адаптивности - делал на глаз*/
 
 
+/* Дальше идёть прелоадер собранный с двух сайтов и отредактированный мной */
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+  }
+  
+  .preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+  
+  .lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #94b0da;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }  
+  .loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }  
 
-.container {
-    max-width: 998px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
+
 
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .button{
-    border: 2px solid #d1dcee;
+    display: inline-block;
+    border: 3px solid #d1dcee;
     border-radius: 5px;
-    height: 40px;
-    text-align: center;
     color:  #d1dcee;
     padding: 12px 16px 12px 16px;
     font-weight: bold;
-
+    transform: scale(1);
+    transition: all 0.2s;
 }
 
 .button:visited{
     color:  #d1dcee;
 }
 
+.button:hover{
+    border-color: #15263d;
+    color: #15263d;
+}
+
+.button:active{
+    transform: scale(1.2);
+    
+}
+
+
 .block{
-    padding-top: 7.5%;
+    padding-top: 110px;
     text-align: center;
 }
 
@@ -44,16 +170,37 @@ body{
     margin: auto;
     border-bottom: 4px solid #EB7800;
     width: 70px;
+    
 
 }
 
+.stick-animation {
+    animation: wipe-enter 1s 0.5s forwards;
+    opacity: 0;
+  }
+  @keyframes wipe-enter {
+    0% {
+        opacity: 0;
+        transform: scale(0, 1)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1)
+    }
+  }
 
-.header{
+
+.header, .header_space{
     width: 100%;
     height: 60px;
     background: #15263d;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 60px;
+}
+
+.header{
+    position:fixed;
+    z-index: 1;
 }
 
 .header__logo{
@@ -62,6 +209,46 @@ body{
     color: white;
     float: left;
 }
+
+.header__logo a:hover{
+    animation: change-color 5s 5s infinite;
+    color:  #EB7800
+  }
+  @keyframes change-color {
+    0% {
+        color: red;
+        
+    }
+
+    14% {
+        color: orange;
+    }
+
+    28%{
+        color: yellow;
+    }
+
+    43%{
+        color: green;
+    }
+
+    57%{
+        color:lightblue;
+    }
+
+    71%{
+        color: darkblue;
+    }
+
+    86% {
+        color: purple;
+    }
+
+    100%{
+        color: red;
+    }
+  }
+
 
 .header__menu{
     font-size: 14px;
@@ -75,23 +262,43 @@ body{
 }
 
 .header__button{
+    display: inline-block;
     font-weight: bold;
     text-transform: uppercase;    
     color: white;
+    transition: all 0.5s;
+    transform: scale(1);
 }
 .header__button:visited{
     color:  white;
 }
-.main{
-    min-height: 100%;
-    background: url(../img/bardcolor.png) calc(100% + 150px) top/auto no-repeat, url(../img/main_bg.png) center/cover no-repeat;
+
+.header__button:hover{
+    color:  #EB7800;
 }
 
-.main__container{
-    float:left;
-    margin-left: 11%;
-    margin-top: 24%;
+.header__button:active{
+    transition: all 0.1s;
+    transform: scale(1.2);
+}
+
+
+
+
+
+.main{
+    background: url(../img/bardcolor.png) calc(100% + 150px) top/auto no-repeat, url(../img/main_bg.png) center/cover no-repeat;
+    
+    height: 100vh;
+}
+
+.main__main{
+    display: inline-block;
+    position:absolute;
     text-align: center;
+    left: 200px;
+    bottom: 150px;
+    /* border: 4px solid red; */
 }
 
 .main__title{
@@ -109,13 +316,21 @@ body{
 
 .main__buttons{
     margin-top: 50px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .main__button{
     margin: 0 14px 0 14px;
+    transform: scale(1);
 }
 
+.main__button:hover{
+    /* Картинка на фоне имеет темные элементы
+    шрифт, перед этими элементами, становиться не читаемым
+    Добовляю фон кнопки что бы исправить это
+    Цвет совпадает с цветом картинки */
+    background-color: #5971aa83;
+}
 
 
 
@@ -154,9 +369,14 @@ body{
     border-color:#6f707e;
 }
 
+
+.about__button:hover .download_ico{
+    filter: invert(0.15);
+}
 .download_ico{
     width: 16px;
     filter: invert(0.45);
+    transition-duration: 0.2s;
 }
 
 
@@ -164,11 +384,12 @@ body{
 
 .iCan{
     background: url(../img/iCan_bg.png) center/cover no-repeat;
+    padding: 0;
 }
 
 .iCan__list{
     display:block;
-    margin-top: 105px;
+    margin-top: 55px;
 }
 
 .iCan__element{
@@ -177,15 +398,33 @@ body{
     margin-bottom: 90px;
 }
 
+.iCan-anim{
+    animation: iCan-enter 1s 0.5s forwards;
+    opacity: 0;
+    /* использование маргина вызовет проблему с изменением ширины iCan блока,
+    но эта проблема выгляди красиво, благодаря фону (он подстраиваеть под изменения ширины) */
+    margin-top: 100px;
+}
+@keyframes iCan-enter {
+  0% {
+      opacity: 0;
+      margin-top: 100px;
+  }
+  100% {
+      opacity: 1;
+      margin-top: 0px;
+  }
+}
+
 .iCan__img{
     width: 53px;
 }
 
 .iCan_title{
-    margin-top: 36px;
+    margin-top: 20px;
     margin-bottom: 20px;
     color:#EB7800;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .iCan__info{
@@ -310,6 +549,7 @@ body{
 
 .statistics{
     background: url(../img/statistics_bg.png) center/cover no-repeat;
+    background-attachment: fixed;
 }
 
 .statistics_list{
@@ -343,6 +583,10 @@ body{
     font-size: 16px;
 }
 
+.statistics__stick{
+    margin-bottom: 40px;
+}
+
 
 
 
@@ -351,6 +595,10 @@ body{
 
 .reviews_container{
     margin-top: 60;
+}
+
+.reviews__stick{
+    margin-bottom: 30px;
 }
 
 .review_img{
@@ -417,6 +665,8 @@ body{
     text-transform: uppercase;
 }
 
+
+
 .form{
     width: 735px;
     margin: auto;
@@ -461,6 +711,12 @@ body{
 .link{
     display: inline-block;
     margin: 0 25px 0 25px;
+    transition-duration: 0.1s;
+}
+
+.link:hover{
+    transform: rotate(10deg);
+
 }
 
 .map{
@@ -478,3 +734,4 @@ footer{
     text-align: center;
     line-height: 95px;
 }
+

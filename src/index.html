@@ -8,15 +8,34 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+    new WOW().init();
+
+    window.onload = function () {
+        document.body.classList.add('loaded_hiding');
+        window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+        }, 500);
+    }
+    </script>
 </head>
 
 <body>
+    
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+    </div>
 
     <header class="header">
-        <div class="header__logo">Flike</div>
-
+        <div class="header__logo"><a class="header__button" href="#main">Flike</a></div>
+        
         <ul class="header__menu">
-
+            
             <li class="header__li"> <a class="header__button" href="#about">Обо мне</a></li>
             <li class="header__li"> <a class="header__button" href="#iCan">Услуги</a></li>
             <li class="header__li"> <a class="header__button" href="#cases">Кейсы</a></li>
@@ -24,30 +43,35 @@
             <li class="header__li"> <a class="header__button" href="#reviews">Отзывы</a></li>
             <li class="header__li"> <a class="header__button" href="#contacts">Контакты</a></li>
         </ul>
-
+        
     </header>
+    <div class="header_space"></div><!-- нужно для отступа перед main блоком, что бы он не улезал на верх, под хеадер -->
+    
+<!-- <main> При добавлении майн всё ломаеться. Причину не понял -->
+    <main>
+        
+    
+        <section class="main">
+            <a name="main"></a>
 
-
-    <div class="main block">
-
-        <div class="main__container">
-            <h1 class="main__title">Привет <br> Я Илья Беликов</h1>
-            <h4 class="main__text">Начинающий веб-разработчик</h4>
-            <div class="main__buttons">
-                <a class="main__button button" href="#about">Обо мне</a>
-                <a class="main__button button" href="#cases">Мои работы</a>
+            <div class="main__main">
+                <h1 class="main__title">Привет <br> Я Илья Беликов</h1>
+                <h4 class="main__text">Начинающий веб-разработчик</h4>
+                <div class="main__buttons">
+                    <a class="main__button button" href="#about">Обо мне</a>
+                    <a class="main__button button" href="#cases">Мои работы</a>
+                </div>
             </div>
-        </div>
-
-    </div>
-
-
-    <div class="about block">
+            
+        </section>
+    
+    
+    <section class="about block">
         <a name="about"></a>
-
+        
         <div class="about__main block">
             <h2 class="about__title title">Обо мне</h2>
-            <div class="about__stick stick"></div>
+            <div class="wow stick-animation about__stick stick"></div>
             <div class="about__avatar"></div>
             <h6 class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo
                 nec ornare diam. Sed
@@ -61,40 +85,40 @@
             </div>
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="iCan block">
+    <section class="iCan block">
         <a name="iCan"></a>
 
 
         <div class="iCan__main block">
             <h2 class="iCan__title title">Что я умею</h2>
-            <div class="iCan__stick stick"></div>
+            <div class="wow stick-animation iCan__stick stick"></div>
             <div class="iCan_block">
                 <ul class="iCan__list">
-                    <li class="iCan__element">
+                    <li class="wow iCan-anim iCan__element">
                         <img class="iCan__img python" src="img\python.svg " alt="Иконка python отсутствует">
                         <h5 class="iCan_title">Python-скриптинг</h5>
                         <h6 class="iCan__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis,
                             ratione sit!</h6>
                     </li>
 
-                    <li class="iCan__element">
+                    <li class="wow iCan-anim iCan__element">
                         <img class="iCan__img php" src="img\php.svg" alt="Иконка php отсутствует">
                         <h5 class="iCan_title">Php-скриптинг</h5>
                         <h6 class="iCan__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis,
                             ratione sit!</h6>
                     </li>
 
-                    <li class="iCan__element">
+                    <li class="wow iCan-anim iCan__element">
                         <img class="iCan__img css" src="img\css.svg" alt="Иконка css отсутствует">
                         <h5 class="iCan_title">Css</h5>
                         <h6 class="iCan__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis,
                             ratione sit!</h6>
                     </li>
 
-                    <li class="iCan__element">
+                    <li class="wow iCan-anim iCan__element">
                         <img class="iCan__img django"
                             src="https://static.djangoproject.com/img/icon-touch.e4872c4da341.png"
                             alt="Иконка django отсутствует">
@@ -106,14 +130,14 @@
             </div>
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="cases block">
+    <section class="cases block">
         <a name="cases"></a>
 
         <h2 class="cases__title title">Кейсы</h2>
-        <div class="cases__stick stick"></div>
+        <div class="wow stick-animation cases__stick stick"></div>
         <h6 class="cases__text">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Eveniet recusandae modi
             laudantium veniam tenetur labore?</h6>
@@ -155,10 +179,10 @@
 
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="calculation block">
+    <section class="calculation block">
         <a name="calculation"></a>
 
         <h2 class="calculation_title title">Расчёт стоимости</h2>
@@ -205,51 +229,51 @@
 
             </form>
         </div>
-    </div>
+    </section>
 
 
-    <div class="statistics block">
+    <section class="statistics block">
 
         <h2 class="statistics_title title">Немного статистики</h2>
-        <div class="statistics__stick stick"></div>
+        <div class="wow stick-animation statistics__stick stick"></div>
 
         <div class="statistics_list">
             <ul>
                 <li class="statistic_item statistic_smile">
                     <img class="statistics_icon" src="img\smile.svg" alt="Иконка smile отсутствует">
-                    <h3 class="stat_number">1</h3>
+                    <h3 class="stat_number count">1</h3>
                     <h5 class="stat_text">Счастливых клиентов</h5>
                 </li>
 
                 <li class="statistic_item statistic_coding">
                     <img class="statistics_icon" src="img\coding.svg" alt="Иконка coding отсутствует">
-                    <h3 class="stat_number">100</h3>
+                    <h3 class="stat_number count">100</h3>
                     <h5 class="stat_text">Часов работы</h5>
                 </li>
 
                 <li class="statistic_item statistic_checked">
                     <img class="statistics_icon" src="img\checked.svg" alt="Иконка checked отсутствует">
-                    <h3 class="stat_number">2</h3>
+                    <h3 class="stat_number count">2</h3>
                     <h5 class="stat_text">Проекта завершено</h5>
                 </li>
 
                 <li class="statistic_item statistic_trophy">
                     <img class="statistics_icon statistics_icon_trophy" src="img\trophy.svg"
                         alt="Иконка trophy отсутствует">
-                    <h3 class="stat_number">0</h3>
+                    <h3 class="stat_number count">0</h3>
                     <h5 class="stat_text">Наград получено</h5>
                 </li>
             </ul>
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="reviews block">
+    <section class="reviews block">
         <a name="reviews"></a>
 
         <h2 class="reviews_title title">Отзывы</h2>
-        <div class="reviews__stick stick"></div>
+        <div class="wow stick-animation reviews__stick stick"></div>
 
         <div class="reviews_container">
 
@@ -269,14 +293,14 @@
             <div class="tipo_slider stick"></div> <!-- просто замена слайдера покак его нету -->
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="contacts block">
+    <section class="contacts block">
         <a name="contacts"></a>
 
         <h2 class="contacts_title title">Мои контакты</h2>
-        <div class="contacts__stick stick"></div>
+        <div class="wow stick-animation contacts__stick stick"></div>
         <h5 class="contacts__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nesciunt dolorem
             dignissimos provident
             fugiat
@@ -330,8 +354,9 @@
 
         </div>
 
-    </div>
-
+    </section>
+<!-- </main> -->
+</main>
 
     <div class="map block">
         <iframe
@@ -339,6 +364,7 @@
             width="100%" height="400" frameborder="0"></iframe>
     </div>
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="js/script.js"></script>
 
     <footer>
         <h5 class="footer_text">Copyright © 2021 Илья Беликов. Design by Flike</h5>
