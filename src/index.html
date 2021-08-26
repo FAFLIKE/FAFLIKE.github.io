@@ -11,31 +11,42 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
-    new WOW().init();
+        new WOW().init();
 
-    window.onload = function () {
-        document.body.classList.add('loaded_hiding');
-        window.setTimeout(function () {
-        document.body.classList.add('loaded');
-        document.body.classList.remove('loaded_hiding');
-        }, 500);
-    }
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
     </script>
 </head>
 
 <body>
-    
+
     <div class="preloader">
         <div class="preloader__row">
-            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-      </div>
+            <div class="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
     </div>
 
     <header class="header">
         <div class="header__logo"><a class="header__button" href="#main">Flike</a></div>
-        
+
         <ul class="header__menu">
-            
+
             <li class="header__li"> <a class="header__button" href="#about">Обо мне</a></li>
             <li class="header__li"> <a class="header__button" href="#iCan">Услуги</a></li>
             <li class="header__li"> <a class="header__button" href="#cases">Кейсы</a></li>
@@ -43,14 +54,15 @@
             <li class="header__li"> <a class="header__button" href="#reviews">Отзывы</a></li>
             <li class="header__li"> <a class="header__button" href="#contacts">Контакты</a></li>
         </ul>
-        
+
     </header>
-    <div class="header_space"></div><!-- нужно для отступа перед main блоком, что бы он не улезал на верх, под хеадер -->
-    
-<!-- <main> При добавлении майн всё ломаеться. Причину не понял -->
+    <div class="header_space"></div>
+    <!-- нужно для отступа перед main блоком, что бы он не улезал на верх, под хеадер -->
+
+    <!-- <main> При добавлении майн всё ломаеться. Причину не понял -->
     <main>
-        
-    
+
+
         <section class="main">
             <a name="main"></a>
 
@@ -62,254 +74,261 @@
                     <a class="main__button button" href="#cases">Мои работы</a>
                 </div>
             </div>
-            
+
         </section>
-    
-    
-    <section class="about block">
-        <a name="about"></a>
-        
-        <div class="about__main block">
-            <h2 class="about__title title">Обо мне</h2>
-            <div class="wow stick-animation about__stick stick"></div>
-            <div class="about__avatar"></div>
-            <h6 class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo
-                nec ornare diam. Sed
-                commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo
-                nibh. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
-                diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam
-                commodo nibh.</h6>
-            <div class="about__buttons">
-                <a class="about__button button" href="ссылка на резюме"> <img class="download_ico"
-                        src="img/download-button.svg" alt="Картинка загрузки"> Скачать резюме</a>
+
+
+        <section class="about block">
+            <a name="about"></a>
+
+            <div class="about__main block">
+                <h2 class="about__title title">Обо мне</h2>
+                <div class="wow stick-animation about__stick stick"></div>
+                <div class="about__avatar"></div>
+                <h6 class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo
+                    nec ornare diam. Sed
+                    commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo
+                    nibh. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec
+                    ornare
+                    diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare
+                    diam
+                    commodo nibh.</h6>
+                <div class="about__buttons">
+                    <a class="about__button button" href="ссылка на резюме"> <img class="download_ico"
+                            src="img/download-button.svg" alt="Картинка загрузки"> Скачать резюме</a>
+                </div>
             </div>
-        </div>
 
-    </section>
-
-
-    <section class="iCan block">
-        <a name="iCan"></a>
+        </section>
 
 
-        <div class="iCan__main block">
-            <h2 class="iCan__title title">Что я умею</h2>
-            <div class="wow stick-animation iCan__stick stick"></div>
-            <div class="iCan_block">
-                <ul class="iCan__list">
-                    <li class="wow iCan-anim iCan__element">
-                        <img class="iCan__img python" src="img\python.svg " alt="Иконка python отсутствует">
-                        <h5 class="iCan_title">Python-скриптинг</h5>
-                        <h6 class="iCan__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis,
-                            ratione sit!</h6>
+        <section class="iCan block">
+            <a name="iCan"></a>
+
+
+            <div class="iCan__main block">
+                <h2 class="iCan__title title">Что я умею</h2>
+                <div class="wow stick-animation iCan__stick stick"></div>
+                <div class="iCan_block">
+                    <ul class="iCan__list">
+                        <li class="wow iCan-anim iCan__element">
+                            <img class="iCan__img python" src="img\python.svg " alt="Иконка python отсутствует">
+                            <h5 class="iCan_title">Python-скриптинг</h5>
+                            <h6 class="iCan__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Perferendis,
+                                ratione sit!</h6>
+                        </li>
+
+                        <li class="wow iCan-anim iCan__element">
+                            <img class="iCan__img php" src="img\php.svg" alt="Иконка php отсутствует">
+                            <h5 class="iCan_title">Php-скриптинг</h5>
+                            <h6 class="iCan__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Perferendis,
+                                ratione sit!</h6>
+                        </li>
+
+                        <li class="wow iCan-anim iCan__element">
+                            <img class="iCan__img css" src="img\css.svg" alt="Иконка css отсутствует">
+                            <h5 class="iCan_title">Css</h5>
+                            <h6 class="iCan__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Perferendis,
+                                ratione sit!</h6>
+                        </li>
+
+                        <li class="wow iCan-anim iCan__element">
+                            <img class="iCan__img django"
+                                src="https://static.djangoproject.com/img/icon-touch.e4872c4da341.png"
+                                alt="Иконка django отсутствует">
+                            <h5 class="iCan_title">Django</h5>
+                            <h6 class="iCan__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Perferendis,
+                                ratione sit!</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="cases block">
+            <a name="cases"></a>
+
+            <h2 class="cases__title title">Кейсы</h2>
+            <div class="wow stick-animation cases__stick stick"></div>
+            <h6 class="cases__text">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet recusandae modi
+                laudantium veniam tenetur labore?</h6>
+
+            <div class="cases">
+                <button><img src="img\left-arrow.svg" alt="&lt;"></button>
+                <button><img src="img\right-arrow.svg" alt="&gt;"></button>
+
+
+                <div class="case case_1">
+                    <img class="cases__image caseImg_1" src="img/case_example.png" alt="изображение кейса 1">
+                    <div class="case_block">
+                        <span class="block_left">
+                            <div class="client_info">
+                                <h2 class="case__title">Client</h2>
+                                <h3 class="case__text">Какая-то компания 1</h3>
+                            </div>
+                            <div class="website_url">
+                                <h2 class="case__title">Website</h2>
+                                <h3 class="case__text">https://www.somewebdomain.1.com</h3>
+                            </div>
+                        </span>
+                        <span class="block_right">
+                            <div class="project_info">
+                                <h2 class="case__title">Название проекта 1</h2>
+                                <h3 class="case__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                                    doloremque labore
+                                    reprehenderit tempora culpa laboriosam consectetur accusantium quam repellendus
+                                    perspiciatis! Iure rem quaerat error voluptatibus atque maxime tempora explicabo
+                                    provident!
+                                </h3>
+                            </div>
+                        </span>
+                    </div>
+                    <span class="visit">
+                        <a class="visit_button button" href="сайт кейса">Visit Live Site</a>
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="calculation block">
+            <a name="calculation"></a>
+
+            <h2 class="calculation_title title">Расчёт стоимости</h2>
+            <div class="calculation_container">
+                <form class="calculation_form" action="calculation_site_price">
+
+                    <h3 class="form_title">Тип сайта</h3>
+                    <select class="site_type list">
+                        <option class="list" value="select">Выберите пункт...</option>
+                        <option class="list" value="landing">Лэндинг</option>
+                        <option class="list" value="visiting_card">Визитная карточка</option>
+                        <option class="list" value="internet_market">Интернет магазин</option>
+                    </select>
+
+                    <h3 class="form_title">Дизайн</h3>
+                    <select class="design list">
+                        <!-- дизайны загуглил -->
+                        <option class="list" value="select">Выберите пункт...</option>
+                        <option class="list" value="classic">Классика</option>
+                        <option class="list" value="grunge">Гранж</option>
+                        <option class="list" value="minimalism">Минимализм</option>
+                        <option class="list" value="typography">Типографика</option>
+                        <option class="list" value="retro">Ретро</option>
+                        <option class="list" value="sketch">Эскизный</option>
+                        <option class="list" value="polygonal">Полигональный</option>
+                        <option class="list" value="natural">Natural</option>
+                        <option class="list" value="other">Другой</option>
+                    </select>
+
+                    <h3 class="form_title">Адаптивность</h3>
+                    <select class="adaptability list">
+                        <option class="list" value="select">Выберите пункт...</option>
+                        <option class="list" value="all">На все устройства</option>
+                        <option class="list" value="pc">Только компьютеры</option>
+                        <option class="list" value="mobile">Только мобильные устройства</option>
+                    </select>
+
+                    <div class="calculation__stick stick"></div>
+
+                    <p class="calc_time calc_endText"><span class="left_calc">Сроки</span><span
+                            class="right_calc">0</span>
+                    </p>
+                    <p class="calc_price calc_endText"><span class="left_calc">Стоимость</span><span
+                            class="right_calc">0</span></p>
+
+                </form>
+            </div>
+        </section>
+
+
+        <section class="statistics block">
+
+            <h2 class="statistics_title title">Немного статистики</h2>
+            <div class="wow stick-animation statistics__stick stick"></div>
+
+            <div class="statistics_list">
+                <ul>
+                    <li class="statistic_item statistic_smile">
+                        <img class="statistics_icon" src="img\smile.svg" alt="Иконка smile отсутствует">
+                        <h3 class="stat_number count">1</h3>
+                        <h5 class="stat_text">Счастливых клиентов</h5>
                     </li>
 
-                    <li class="wow iCan-anim iCan__element">
-                        <img class="iCan__img php" src="img\php.svg" alt="Иконка php отсутствует">
-                        <h5 class="iCan_title">Php-скриптинг</h5>
-                        <h6 class="iCan__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis,
-                            ratione sit!</h6>
+                    <li class="statistic_item statistic_coding">
+                        <img class="statistics_icon" src="img\coding.svg" alt="Иконка coding отсутствует">
+                        <h3 class="stat_number count">100</h3>
+                        <h5 class="stat_text">Часов работы</h5>
                     </li>
 
-                    <li class="wow iCan-anim iCan__element">
-                        <img class="iCan__img css" src="img\css.svg" alt="Иконка css отсутствует">
-                        <h5 class="iCan_title">Css</h5>
-                        <h6 class="iCan__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis,
-                            ratione sit!</h6>
+                    <li class="statistic_item statistic_checked">
+                        <img class="statistics_icon" src="img\checked.svg" alt="Иконка checked отсутствует">
+                        <h3 class="stat_number count">2</h3>
+                        <h5 class="stat_text">Проекта завершено</h5>
                     </li>
 
-                    <li class="wow iCan-anim iCan__element">
-                        <img class="iCan__img django"
-                            src="https://static.djangoproject.com/img/icon-touch.e4872c4da341.png"
-                            alt="Иконка django отсутствует">
-                        <h5 class="iCan_title">Django</h5>
-                        <h6 class="iCan__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis,
-                            ratione sit!</h6>
+                    <li class="statistic_item statistic_trophy">
+                        <img class="statistics_icon statistics_icon_trophy" src="img\trophy.svg"
+                            alt="Иконка trophy отсутствует">
+                        <h3 class="stat_number count">0</h3>
+                        <h5 class="stat_text">Наград получено</h5>
                     </li>
                 </ul>
             </div>
-        </div>
 
-    </section>
-
-
-    <section class="cases block">
-        <a name="cases"></a>
-
-        <h2 class="cases__title title">Кейсы</h2>
-        <div class="wow stick-animation cases__stick stick"></div>
-        <h6 class="cases__text">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Eveniet recusandae modi
-            laudantium veniam tenetur labore?</h6>
-
-        <div class="cases">
-            <button><img src="img\left-arrow.svg" alt="&lt;"></button>
-            <button><img src="img\right-arrow.svg" alt="&gt;"></button>
+        </section>
 
 
-            <div class="case case_1">
-                <img class="cases__image caseImg_1" src="img/case_example.png" alt="изображение кейса 1">
-                <div class="case_block">
-                    <span class="block_left">
-                        <div class="client_info">
-                            <h2 class="case__title">Client</h2>
-                            <h3 class="case__text">Какая-то компания 1</h3>
-                        </div>
-                        <div class="website_url">
-                            <h2 class="case__title">Website</h2>
-                            <h3 class="case__text">https://www.somewebdomain.1.com</h3>
-                        </div>
-                    </span>
-                    <span class="block_right">
-                        <div class="project_info">
-                            <h2 class="case__title">Название проекта 1</h2>
-                            <h3 class="case__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-                                doloremque labore
-                                reprehenderit tempora culpa laboriosam consectetur accusantium quam repellendus
-                                perspiciatis! Iure rem quaerat error voluptatibus atque maxime tempora explicabo
-                                provident!
-                            </h3>
-                        </div>
-                    </span>
-                </div>
-                <span class="visit">
-                    <a class="visit_button button" href="сайт кейса">Visit Live Site</a>
-                </span>
-            </div>
+        <section class="reviews block">
+            <a name="reviews"></a>
 
-        </div>
+            <h2 class="reviews_title title">Отзывы</h2>
+            <div class="wow stick-animation reviews__stick stick"></div>
 
-    </section>
+            <div class="reviews_container">
 
-
-    <section class="calculation block">
-        <a name="calculation"></a>
-
-        <h2 class="calculation_title title">Расчёт стоимости</h2>
-        <div class="calculation_container">
-            <form class="calculation_form" action="calculation_site_price">
-
-                <h3 class="form_title">Тип сайта</h3>
-                <select class="site_type list">
-                    <option class="list" value="select">Выберите пункт...</option>
-                    <option class="list" value="landing">Лэндинг</option>
-                    <option class="list" value="visiting_card">Визитная карточка</option>
-                    <option class="list" value="internet_market">Интернет магазин</option>
-                </select>
-
-                <h3 class="form_title">Дизайн</h3>
-                <select class="design list">
-                    <!-- дизайны загуглил -->
-                    <option class="list" value="select">Выберите пункт...</option>
-                    <option class="list" value="classic">Классика</option>
-                    <option class="list" value="grunge">Гранж</option>
-                    <option class="list" value="minimalism">Минимализм</option>
-                    <option class="list" value="typography">Типографика</option>
-                    <option class="list" value="retro">Ретро</option>
-                    <option class="list" value="sketch">Эскизный</option>
-                    <option class="list" value="polygonal">Полигональный</option>
-                    <option class="list" value="natural">Natural</option>
-                    <option class="list" value="other">Другой</option>
-                </select>
-
-                <h3 class="form_title">Адаптивность</h3>
-                <select class="adaptability list">
-                    <option class="list" value="select">Выберите пункт...</option>
-                    <option class="list" value="all">На все устройства</option>
-                    <option class="list" value="pc">Только компьютеры</option>
-                    <option class="list" value="mobile">Только мобильные устройства</option>
-                </select>
-
-                <div class="calculation__stick stick"></div>
-
-                <p class="calc_time calc_endText"><span class="left_calc">Сроки</span><span class="right_calc">0</span>
-                </p>
-                <p class="calc_price calc_endText"><span class="left_calc">Стоимость</span><span
-                        class="right_calc">0</span></p>
-
-            </form>
-        </div>
-    </section>
-
-
-    <section class="statistics block">
-
-        <h2 class="statistics_title title">Немного статистики</h2>
-        <div class="wow stick-animation statistics__stick stick"></div>
-
-        <div class="statistics_list">
-            <ul>
-                <li class="statistic_item statistic_smile">
-                    <img class="statistics_icon" src="img\smile.svg" alt="Иконка smile отсутствует">
-                    <h3 class="stat_number count">1</h3>
-                    <h5 class="stat_text">Счастливых клиентов</h5>
-                </li>
-
-                <li class="statistic_item statistic_coding">
-                    <img class="statistics_icon" src="img\coding.svg" alt="Иконка coding отсутствует">
-                    <h3 class="stat_number count">100</h3>
-                    <h5 class="stat_text">Часов работы</h5>
-                </li>
-
-                <li class="statistic_item statistic_checked">
-                    <img class="statistics_icon" src="img\checked.svg" alt="Иконка checked отсутствует">
-                    <h3 class="stat_number count">2</h3>
-                    <h5 class="stat_text">Проекта завершено</h5>
-                </li>
-
-                <li class="statistic_item statistic_trophy">
-                    <img class="statistics_icon statistics_icon_trophy" src="img\trophy.svg"
-                        alt="Иконка trophy отсутствует">
-                    <h3 class="stat_number count">0</h3>
-                    <h5 class="stat_text">Наград получено</h5>
-                </li>
-            </ul>
-        </div>
-
-    </section>
-
-
-    <section class="reviews block">
-        <a name="reviews"></a>
-
-        <h2 class="reviews_title title">Отзывы</h2>
-        <div class="wow stick-animation reviews__stick stick"></div>
-
-        <div class="reviews_container">
-
-            <ul>
-                <li class="review review_1">
-                    <img class="review_img" src="img\anonymous.svg" alt="Иконка anonymous отсутствует">
-                    <h5 class="review_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Molestiae
-                        assumenda iste fuga
-                        fugit illo cupiditate.</h5>
-                    <h5 class="review_title">Анонимус. Несуществующий отзыв</h5>
-                </li>
-            </ul>
-            <!--    сюда ещё нужны кнопки для переключения отзывов
+                <ul>
+                    <li class="review review_1">
+                        <img class="review_img" src="img\anonymous.svg" alt="Иконка anonymous отсутствует">
+                        <h5 class="review_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Molestiae
+                            assumenda iste fuga
+                            fugit illo cupiditate.</h5>
+                        <h5 class="review_title">Анонимус. Несуществующий отзыв</h5>
+                    </li>
+                </ul>
+                <!--    сюда ещё нужны кнопки для переключения отзывов
                     но я не уверен как их лучще сделать
                     типо такого:  ⦿ ◯ ◯
             -->
-            <div class="tipo_slider stick"></div> <!-- просто замена слайдера покак его нету -->
-        </div>
+                <div class="tipo_slider stick"></div> <!-- просто замена слайдера покак его нету -->
+            </div>
 
-    </section>
-
-
-    <section class="contacts block">
-        <a name="contacts"></a>
-
-        <h2 class="contacts_title title">Мои контакты</h2>
-        <div class="wow stick-animation contacts__stick stick"></div>
-        <h5 class="contacts__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nesciunt dolorem
-            dignissimos provident
-            fugiat
-            ut quas, alias laboriosam non delectus.</h5>
+        </section>
 
 
-        <div class="contacts_container">
-            <ul>
-                
+        <section class="contacts block">
+            <a name="contacts"></a>
+
+            <h2 class="contacts_title title">Мои контакты</h2>
+            <div class="wow stick-animation contacts__stick stick"></div>
+            <h5 class="contacts__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nesciunt dolorem
+                dignissimos provident
+                fugiat
+                ut quas, alias laboriosam non delectus.</h5>
+
+
+            <div class="contacts_container">
+                <ul>
+
                     <li class="contact contact_location">
                         <img class="contact_ico" src="img\pin.svg" alt="Иконка pin отсутствует">
                         <h5>Саратов <br> Улица такая-то 12</h5>
@@ -319,44 +338,45 @@
                         <img class="contact_ico" src="img\mail.svg" alt="Иконка mail отсутствует">
                         <h5>info@companyname.com</h5>
                     </li>
-                <li class="contact contact_phone">
-                    <img class="contact_ico" src="img\phone-call.svg" alt="Иконка phone-call отсутствует">
-                    <h5>+7 999 999-99-99</h5>
-                </li>
-            </ul>
+                    <li class="contact contact_phone">
+                        <img class="contact_ico" src="img\phone-call.svg" alt="Иконка phone-call отсутствует">
+                        <h5>+7 999 999-99-99</h5>
+                    </li>
+                </ul>
 
-        </div>
+            </div>
 
-        <h3 class="send_msg">Оставьте мне сообщение</h3>
-        
-        <form class="form" action="send_message" id="send_message">
-            <input class="form_name" type="text" placeholder="Имя" name="name">
-            <input class="form_email" type="email" placeholder="Email" name="email">
-            <textarea class="textarea" name="message" id="message" cols="30" rows="10" placeholder="Сообщение"></textarea>
-            <button class="send_message button" name="send_message" form="send_message">Отправить</button>
-        </form>
+            <h3 class="send_msg">Оставьте мне сообщение</h3>
 
-        <div class="social_links">
+            <form class="form" action="send_message" id="send_message">
+                <input class="form_name" type="text" placeholder="Имя" name="name">
+                <input class="form_email" type="email" placeholder="Email" name="email">
+                <textarea class="textarea" name="message" id="message" cols="30" rows="10"
+                    placeholder="Сообщение"></textarea>
+                <button class="send_message button" name="send_message" form="send_message">Отправить</button>
+            </form>
 
-            <ul>
-                <li class="link link_vk">
-                    <a href="https://vk.com/flike_wpm">
-                        <img class="contact_ico" src="img\vk.svg" alt="VK">
-                    </a>
-                </li>
+            <div class="social_links">
 
-                <li class="link link_discord">
-                    <a href="https://discord.gg/6NDKMDPep6">
-                        <img class="contact_ico" src="img\discord.svg" alt="Discord">
-                    </a>
-                </li>
-            </ul>
+                <ul>
+                    <li class="link link_vk">
+                        <a href="https://vk.com/flike_wpm">
+                            <img class="contact_ico" src="img\vk.svg" alt="VK">
+                        </a>
+                    </li>
 
-        </div>
+                    <li class="link link_discord">
+                        <a href="https://discord.gg/6NDKMDPep6">
+                            <img class="contact_ico" src="img\discord.svg" alt="Discord">
+                        </a>
+                    </li>
+                </ul>
 
-    </section>
-<!-- </main> -->
-</main>
+            </div>
+
+        </section>
+        <!-- </main> -->
+    </main>
 
     <div class="map block">
         <iframe
@@ -364,7 +384,8 @@
             width="100%" height="400" frameborder="0"></iframe>
     </div>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="js/script.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/script.js"></script>
 
     <footer>
         <h5 class="footer_text">Copyright © 2021 Илья Беликов. Design by Flike</h5>
