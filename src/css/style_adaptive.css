@@ -1,0 +1,838 @@
+@import url(https://allfont.ru/index.php/allfont.css?fonts=franklin-gothic-medium);
+
+/* Дальше идёть прелоадер собранный с двух сайтов и отредактированный мной */
+.preloader {
+   /*фиксированное позиционирование*/
+   position: fixed;
+   /* координаты положения */
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   /* фоновый цвет элемента */
+   background: #e0e0e0;
+   /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+   z-index: 1001;
+ }
+ 
+ .preloader__row {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   width: 70px;
+   height: 70px;
+   margin-top: -35px;
+   margin-left: -35px;
+   text-align: center;
+   animation: preloader-rotate 2s infinite linear;
+ }
+ 
+ .lds-roller {
+   display: inline-block;
+   position: relative;
+   width: 80px;
+   height: 80px;
+ }
+ .lds-roller div {
+   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+   transform-origin: 40px 40px;
+
+ }
+ .lds-roller div:after {
+   content: " ";
+   display: block;
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   
+   background: #0a3166;
+   
+   transform: rotate(45deg);
+ }
+
+ .lds-roller div:after {
+   top: 100px;
+   left: 100px;
+   border-radius: 10%;
+ }
+
+ .lds-roller div:nth-child(1) {
+   animation-delay: -0.2s;
+ }
+
+ .lds-roller div:nth-child(2) {
+   animation-delay: -0.2s;
+ }
+
+ .lds-roller div:nth-child(3) {
+   animation-delay: -0.3s;
+ }
+
+ .lds-roller div:nth-child(4) {
+   animation-delay: -0.4s;
+ }
+ 
+ .lds-roller div:nth-child(5) {
+   animation-delay: -0.5s;
+ }
+ 
+ .lds-roller div:nth-child(6) {
+   animation-delay: -0.6s;
+ }
+ 
+ .lds-roller div:nth-child(7) {
+   animation-delay: -0.7s;
+ }
+ 
+ .lds-roller div:nth-child(8) {
+   animation-delay: -0.8s;
+ }
+
+ .lds-roller div:nth-child(9) {
+   animation-delay: -0.9s;
+ }
+
+ .lds-roller div:nth-child(10) {
+   animation-delay: -1s;
+ }
+ @keyframes lds-roller {
+   0% {
+       border-radius: 0%;
+     transform: rotate(0deg);
+   }
+   100% {
+       border-radius: 50%;
+     transform: rotate(-360deg);
+   }
+ }  
+ .loaded_hiding .preloader {
+   transition: 0.3s opacity;
+   opacity: 0;
+ }
+ 
+ .loaded .preloader {
+   display: none;
+ }  
+
+
+
+
+body{
+  font-family: 'Franklin Gothic Medium', cursive, Arial, Helvetica, sans-serif;
+  font-size: 62.5%; /* Это сброс базового размера шрифта до 10px, что бы 1em = 10px */
+}
+
+
+.container{
+  text-align: center;
+  padding-top: 110px;
+  max-width: 117em;
+  margin: 0 auto 0 auto;
+}
+
+.button{
+  display: inline-block;
+  border: 3px solid #d1dcee;
+  border-radius: 5px;
+  color:  #d1dcee;
+  padding: 12px 16px 12px 16px;
+  font-weight: bold;
+  font-size: 19px;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+
+.button:visited{
+  color:  #d1dcee;
+}
+
+.button:hover{
+  border-color: #15263d;
+  color: #15263d;
+}
+
+.button:active{
+  transform: scale(1.2);
+  
+}
+
+.title{
+  font-size: 33px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+}
+
+.stick{
+  margin: auto;
+  border-bottom: 4px solid #EB7800;
+  width: 70px;
+  
+
+}
+
+.stick-animation {
+  animation: wipe-enter 1s 0.5s forwards;
+  opacity: 0;
+}
+@keyframes wipe-enter {
+  0% {
+      opacity: 0;
+      transform: scale(0, 1)
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1, 1)
+  }
+}
+
+
+.header, .header_space{
+  width: 100%;
+  min-height: 60px;
+  background: #15263d;
+  line-height: 60px;
+}
+
+.header{
+  position:fixed;
+  z-index: 1;
+}
+
+.header__container{
+  width: 1170px;
+  margin: auto;
+}
+
+.header__logo{
+  font-size: 23px;
+  color: white;
+  float: left;
+}
+
+.header__logo a:hover{
+  animation: change-color 5s 5s infinite;
+  color:  #EB7800
+}
+@keyframes change-color {
+  0% {
+      color: red;
+      
+  }
+
+  14% {
+      color: orange;
+  }
+
+  28%{
+      color: yellow;
+  }
+
+  43%{
+      color: green;
+  }
+
+  57%{
+      color:lightblue;
+  }
+
+  71%{
+      color: darkblue;
+  }
+
+  86% {
+      color: purple;
+  }
+
+  100%{
+      color: red;
+  }
+}
+
+
+.header__menu{
+  font-size: 14px;
+  float: right;
+}
+
+
+.header__li{
+  float: left;
+  margin-left: 36px;
+}
+
+.header__button{
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;    
+  color: white;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+.header__button:visited{
+  color:  white;
+}
+
+.header__button:hover{
+  color:  #EB7800;
+}
+
+.header__button:active{
+  transition: all 0.1s;
+  transform: scale(1.2);
+}
+
+
+
+
+.header__mobileMenu{
+	display: none;
+}
+
+.nav__check {display: none;}
+.mobileMenu__lable {cursor: pointer;}
+
+.mobileMenu {user-select: none;}
+
+.mobileMenu__showmenu {
+	
+	z-index: 3;
+    float: right;
+    font-size: 30px;
+	color: white;
+}
+
+.mobileMenu__back {
+    position: fixed;
+    top: 0;
+    right: 0;  
+    bottom: 0;
+    left: 0;
+    transition: background-color .3s;
+	display: none;
+}
+
+.mobileMenu_ul{
+    list-style: none;
+    padding: 0;
+    color: #fff;
+    overflow: hidden;
+
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: calc(100% + 220px);
+    display: block;
+    width: 220px;
+    margin: 0;
+    padding: 17px 0;
+    text-transform: uppercase;
+    line-height: 3em;
+    background-color:#172e50;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(220px);
+    transition: transform .3s;
+    will-change: transform;
+    backface-visibility: hidden;
+	z-index: 2;
+}
+
+.mobileMenu__item {  
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+	font-size: 20px;
+}
+
+.nav__check:checked~.nav__back {
+    background-color: rgba(0,0,0,.2);
+    bottom: 0;
+}
+
+.mobileMenu__item:hover,.mobileMenu__showmenu:hover {opacity: 0.7;}
+.mobileMenu_ul::-webkit-scrollbar {display: none;}
+.nav__check:checked+.mobileMenu__showmenu {color:#EB7800;}
+.nav__check:checked~.mobileMenu__back {display: block;}
+.nav__check:checked~.mobileMenu_ul {transform: translateX(-440px);}
+
+
+
+
+
+.main{
+  background: url(../img/bardcolor.png) calc(100% + 5vw) calc(1vh + 10vw)/70vh no-repeat , url(../img/main_bg.png) center/cover no-repeat;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main__container{
+	
+	padding-top: 43vh;
+	padding-bottom: 30vh;
+	padding-left: 20vw;
+}
+
+.main__info{
+	display: inline-block;
+	text-align: center;
+}
+
+.main__title{
+  color: #94b0da;
+  font-size: 79px;
+  font-weight: bold;
+}
+
+.main__text{
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color:  #d1dcee;
+}
+
+.main__buttons{
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+.main__button{
+  margin: 10px 14px 10px 14px;
+  transform: scale(1);
+}
+
+.main__button:hover{
+  /* Картинка на фоне имеет темные элементы
+  шрифт, перед этими элементами, становиться не читаемым
+  Добовляю фон кнопки что бы исправить это
+  Цвет совпадает с цветом картинки */
+  background-color: #5971aa83;
+}
+
+
+
+.about{
+  /* min-height: 70.6%; */
+  background: white;
+  box-shadow: 0px -20px 20px #00000069;
+}
+
+.about__avatar{
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 22px;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  filter: grayscale(100);
+  background: url(../img/bardcolor.png) center top+30px  no-repeat, #eff0f4;
+  background-size: 280px;
+}
+.about__text{
+  
+  margin: auto;
+  margin-bottom: 34px;
+  max-width: 747px;
+  text-align: left;
+  font-size: 17px;
+  
+}
+
+.about__buttons{
+  height: 97px;
+}
+
+.about__button{
+  margin-bottom: 97px;
+color: #6f707e;
+  border-color:#6f707e;
+}
+
+
+.about__button:hover .download_ico{
+  filter: invert(0.15);
+}
+.download_ico{
+  width: 16px;
+  filter: invert(0.45);
+  transition-duration: 0.2s;
+}
+
+
+
+
+.iCan{
+  background: url(../img/iCan_bg.png) center/cover no-repeat;
+  padding: 0;
+}
+
+.iCan__list{
+  display:block;
+  margin-top: 55px;
+}
+
+.iCan__element{
+  display: inline-block;
+  width: 215px;
+  margin-bottom: 90px;
+}
+
+.iCan-anim{
+  animation: iCan-enter 1s 0.5s forwards;
+  opacity: 0;
+  /* использование маргина вызовет проблему с изменением ширины iCan блока,
+  но эта проблема выгляди красиво, благодаря фону (он подстраиваеть под изменения ширины) */
+  margin-top: 100px;
+}
+@keyframes iCan-enter {
+0% {
+    opacity: 0;
+    margin-top: 100px;
+}
+100% {
+    opacity: 1;
+    margin-top: 0px;
+}
+}
+
+.iCan__img{
+  width: 53px;
+}
+
+.iCan_title{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color:#EB7800;
+  font-size: 18px;
+}
+
+.iCan__info{
+  color: #3f495a;
+  font-size: 16px;
+  
+}
+
+
+
+
+
+
+.case{
+  max-width: 1170px;
+}
+
+.cases__image{
+  width: 100%;
+}
+
+.cases__text{
+  margin-top: 36px;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.case_block{
+  margin-top: 40px;
+  margin-bottom: 25px;
+  display: flex;
+  text-align: left;
+  color: #3f495a;
+}
+
+.block_left, .block_right{
+  display: inline-block;
+}
+
+.block_left{
+  width: auto;
+  margin-right: 45px;
+}
+
+.block_right{
+  width: auto;
+  vertical-align: top;
+}
+
+.case__title{
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-bottom: 17px;
+}
+
+.case__text{
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.case__bigText{
+  font-size: 21px;
+}
+
+.visit{
+  display: block;
+  text-align: left;
+  margin-left: 0px;
+  font-size: 21px;
+}
+
+.visit_button{
+  border-color: #00B6AF;
+  background-color: #00B6AF;
+  font-size: 21px;
+  color: white;
+  text-transform: uppercase;
+  padding: 12px 51px 12px 51px;
+}
+
+
+
+
+.calculation_form{
+  max-width: 890px;
+  display: block;
+  margin: 0 auto 0 auto;
+  text-align: left;
+  color: #1c2534;
+}
+
+.list{
+  width: 100%;
+  height: 60px;
+  padding: 0 24px 0px 24px;
+  margin-bottom: 10px;
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+  color: #737373;
+  font-size: 16px;
+}
+
+.form_title{
+  font-size: 29px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.calculation__stick{
+  border-bottom: 2px solid #d1d1d1;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.right_calc{
+  float:right
+}
+
+.calc_endText{
+  font-size: 21px;
+}
+
+.calc_time{
+  margin-bottom: 20px;
+}
+
+.calc_price{
+  margin-bottom: 150px;
+}
+
+
+
+.statistics{
+  background: url(../img/statistics_bg.png) center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.statistics_list{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.statistic_item{
+  display: inline-block;
+  width: 200px;
+  margin-top: 70px;
+}
+
+
+.statistics_icon{
+  width: 60px;
+  filter: hue-rotate(36deg) brightness(4);
+}
+
+.statistics_icon_trophy{
+  filter: hue-rotate(-20deg) saturate(2);
+}
+
+
+
+.stat_number{
+  margin: 30px 0 30px 0;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.stat_text{
+  font-size: 16px;
+}
+
+.statistics__stick{
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+.reviews_container{
+  margin-top: 60;
+}
+
+.reviews__stick{
+  margin-bottom: 30px;
+}
+
+.review_img{
+  width: 100px;
+  border: #0000;
+  border-radius: 50px;
+  background-color: lightgray;
+  margin-bottom: 35px;
+}
+
+.review_text{
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+.review_title{
+  margin-bottom: 50px;
+  font-size: 16px; 
+}
+
+.tipo_slider{
+  width: 110px;
+  border-bottom: 10px dotted #EB7800;
+  margin-bottom: 90px;
+}
+
+
+
+.contacts{
+  background: url(../img/contacts_bg.png) center/cover no-repeat;
+  /* На картинке из макета нарисованны значки. Нашёл оригинал картинки без значков. 
+  В паинте ресайзнул и перекрасил с использованием сепии (ориг черно-белый) */
+  color: white;
+}
+
+.contacts__stick{
+  margin-bottom: 30px;
+}
+
+.contacts__text{
+  margin-bottom: 48px;
+  font-size: 16px;
+}
+
+.contacts_container{
+  color: white;
+  font-size: 16px;
+  line-height: 23px;
+  margin-bottom: 40px;
+}
+
+.contact_ico{
+  width: 30px;
+  filter: brightness(0) invert();
+}
+
+.contact{
+  display: inline-block;
+  margin-top:  30px;
+  vertical-align: top;
+  width: 32%;
+}
+
+.send_msg{
+  font-size: 21px;
+  margin-bottom: 45px;
+  text-transform: uppercase;
+}
+
+
+
+.form{
+  max-width: 735px;
+  margin: auto;
+  padding: 0px;
+  
+}
+
+.form_name{
+  padding-left: 13px;
+  width: 49%;
+  height: 35px;
+  float: left;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.form_email{
+  padding-left: 13px;
+  width: 49%;
+  height: 35px;
+  float: right;    
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.textarea{
+  padding-left: 13px;
+  padding-top: 10px;
+  width: 100%;
+  height: 95px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.send_message{
+  text-align: center;
+  line-height: 0px;
+  background: transparent;
+  margin-bottom: 75px;
+}
+
+.social_links{
+  padding-bottom: 65px;
+}
+
+.link{
+  display: inline-block;
+  margin: 0 25px 0 25px;
+  transition-duration: 0.1s;
+}
+
+.link:hover{
+  transform: rotate(10deg);
+
+}
+
+.map{
+  padding-top: 0;
+}
+
+footer{
+  display: block;
+  height: 95px;
+  background-color: #354051;
+  color: white;
+  font-size: 16px;
+}
+.footer_text{
+  text-align: center;
+  line-height: 95px;
+}

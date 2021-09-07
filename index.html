@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Flike">
+    <title>Домашнее задание [Flike]</title>
+
+    <meta http-equiv="refresh" content="0;src/index_bootstrap.html" />
+
+
+    <style>
+        .preloader {
+   /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+  }
+  
+  .preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+  
+  .lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    
+    background: #0a3166;
+    
+    transform: rotate(45deg);
+  }
+
+  .lds-roller div:after {
+    top: 100px;
+    left: 100px;
+    border-radius: 10%;
+  }
+
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.2s;
+  }
+ 
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+ 
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.3s;
+  }
+ 
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.4s;
+  }
+  
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.5s;
+  }
+  
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.6s;
+  }
+  
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.7s;
+  }
+  
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.8s;
+  }
+
+  .lds-roller div:nth-child(9) {
+    animation-delay: -0.9s;
+  }
+
+  .lds-roller div:nth-child(10) {
+    animation-delay: -1s;
+  }
+  @keyframes lds-roller {
+    0% {
+        border-radius: 0%;
+      transform: rotate(0deg);
+    }
+    100% {
+        border-radius: 50%;
+      transform: rotate(-360deg);
+    }
+  }  
+  .loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }  
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
