@@ -12,17 +12,7 @@
     <link rel="stylesheet" href="css/style_adaptive_media.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-        new WOW().init();
-
-        window.onload = function () {
-            document.body.classList.add('loaded_hiding');
-            window.setTimeout(function () {
-                document.body.classList.add('loaded');
-                document.body.classList.remove('loaded_hiding');
-            }, 500);
-        }
-    </script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -224,17 +214,17 @@
                 <form class="calculation_form" action="calculation_site_price">
 
                     <h3 class="form_title">Тип сайта</h3>
-                    <select class="site_type list">
-                        <option class="list" value="select">Выберите пункт...</option>
+                    <select class="site_type list" onchange="calculator.changeType(value)">
+                        <option class="list" value="none" selected>Выберите пункт...</option>
                         <option class="list" value="landing">Лэндинг</option>
                         <option class="list" value="visiting_card">Визитная карточка</option>
                         <option class="list" value="internet_market">Интернет магазин</option>
                     </select>
 
                     <h3 class="form_title">Дизайн</h3>
-                    <select class="design list">
+                    <select class="design list" onchange="calculator.changeDesign(value)">
                         <!-- дизайны загуглил -->
-                        <option class="list" value="select">Выберите пункт...</option>
+                        <option class="list" value="none" selected>Выберите пункт...</option>
                         <option class="list" value="classic">Классика</option>
                         <option class="list" value="grunge">Гранж</option>
                         <option class="list" value="minimalism">Минимализм</option>
@@ -247,8 +237,8 @@
                     </select>
 
                     <h3 class="form_title">Адаптивность</h3>
-                    <select class="adaptability list">
-                        <option class="list" value="select">Выберите пункт...</option>
+                    <select class="adaptability list" onchange="calculator.changeAdaptability(value)">
+                        <option class="list" value="none" selected>Выберите пункт...</option>
                         <option class="list" value="all">На все устройства</option>
                         <option class="list" value="pc">Только компьютеры</option>
                         <option class="list" value="mobile">Только мобильные устройства</option>
@@ -257,10 +247,10 @@
                     <div class="calculation__stick stick"></div>
 
                     <p class="calc_time calc_endText"><span class="left_calc">Сроки</span><span
-                            class="right_calc">0</span>
+                            class="right_calc" id="deadline"></span>
                     </p>
                     <p class="calc_price calc_endText"><span class="left_calc">Стоимость</span><span
-                            class="right_calc">0</span></p>
+                            class="right_calc" id="price"></span></p>
 
                 </form>
             </div>
