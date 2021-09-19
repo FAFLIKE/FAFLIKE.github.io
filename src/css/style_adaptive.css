@@ -1,5 +1,10 @@
 @import url(https://allfont.ru/index.php/allfont.css?fonts=franklin-gothic-medium);
 
+html{
+  scroll-behavior: smooth;
+}
+
+
 /* Дальше идёть прелоадер собранный с двух сайтов и отредактированный мной */
 .preloader {
    /*фиксированное позиционирование*/
@@ -521,7 +526,7 @@ color: #6f707e;
 
 
 .case{
-  max-width: 1170px;
+  padding: 0 1px; /*  нужен чтобы убрать зазоры со второго элемента слайдера */
 }
 
 .cases__image{
@@ -587,6 +592,16 @@ color: #6f707e;
   padding: 12px 51px 12px 51px;
 }
 
+.visit_button:active{
+  transform: none;
+  font-size: 24px;
+  
+}
+
+.cases .slider__indicator, .cases .slider__indicator_active{
+  display: none;
+}
+
 
 
 
@@ -630,14 +645,18 @@ color: #6f707e;
   font-size: 21px;
 }
 
-.calc_time{
+.calc_time, .calc_price{
   margin-bottom: 20px;
 }
 
-.calc_price{
-  margin-bottom: 150px;
+.calculation_container{
+  margin-bottom: 100px;
 }
 
+.calc__button{
+  color: #0a3166 !important;
+  border-color: #0a3166;
+}
 
 
 .statistics{
@@ -718,6 +737,25 @@ color: #6f707e;
   width: 110px;
   border-bottom: 10px dotted #EB7800;
   margin-bottom: 90px;
+}
+
+.reviews .slider__indicator, .reviews .slider__indicator_active{
+  background-color: #EB7800;
+  width: 20px;
+  height: 20px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.reviews .slider__indicator_active{
+  background-color: #ff9c33;
+}
+
+.reviews .slider__indicators{
+  padding-bottom: 10px;
+}
+
+.reviews__slider{
+  width: auto;
 }
 
 
@@ -804,6 +842,14 @@ color: #6f707e;
   line-height: 0px;
   background: transparent;
   margin-bottom: 75px;
+}
+
+.modal__title{
+  font-size: 32px !important;
+}
+
+.modal__body{
+  font-size: 24px;
 }
 
 .social_links{

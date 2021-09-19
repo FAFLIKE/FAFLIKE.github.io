@@ -1,22 +1,12 @@
-new WOW().init();
-
-window.onload = function () {
-    document.body.classList.add('loaded_hiding');
-    window.setTimeout(function () {
-        document.body.classList.add('loaded');
-        document.body.classList.remove('loaded_hiding');
-    }, 500);
-};
-
 let calculator = {
     "type": "none",
     "design": "none",
     "aptability": "none",
-    "doMath": function(){
+    "doMath": function () {
         let price = 0;
         let deadlines = 1;
-        
-        switch(this.type){
+
+        switch (this.type) {
             case 'landing':
                 price += 100;
                 deadlines += 1;
@@ -33,11 +23,11 @@ let calculator = {
                 break;
         };
 
-        switch(this.design){
+        switch (this.design) {
             case 'classic':
                 price += 100;
                 deadlines += 1;
-                break;        
+                break;
             case 'grunge':
                 price += 100;
                 deadlines += 1;
@@ -74,7 +64,7 @@ let calculator = {
                 break;
         };
 
-        switch(this.aptability){
+        switch (this.aptability) {
             case 'all':
                 price += 300;
                 deadlines += 2;
@@ -93,7 +83,7 @@ let calculator = {
 
         let weekText = "";
 
-        switch(deadlines){
+        switch (deadlines) {
             case 1:
                 weekText = "неделя";
                 break;
@@ -107,20 +97,69 @@ let calculator = {
                 break;
         };
 
-        document.getElementById("deadline").textContent="< "+deadlines+" "+weekText;
-        document.getElementById("price").textContent="< "+price+" $";
+        document.getElementById("deadline").textContent = "< " + deadlines + " " + weekText;
+        document.getElementById("price").textContent = "< " + price + " $";
     },
-    "changeType": function (value){
+    "changeType": function (value) {
         this.type = value;
         this.doMath();
     },
-    "changeDesign": function (value){
+    "changeDesign": function (value) {
         this.design = value;
         this.doMath();
     },
-    "changeAdaptability": function (value){
+    "changeAdaptability": function (value) {
         this.aptability = value;
         this.doMath();
     },
 
 };
+
+
+new WOW().init();
+
+var cases_slider = new SimpleAdaptiveSlider('.cases__slider', {
+    autoplay: false,
+    swipe: true,
+});
+
+var reviews_slider = new SimpleAdaptiveSlider('.reviews__slider', {
+    autoplay: false,
+    swipe: true,
+    loop: false,
+});
+
+document.body.classList.add('loaded_hiding');
+window.setTimeout(function () {
+    document.body.classList.add('loaded');
+    document.body.classList.remove('loaded_hiding');
+}, 500);
+
+
+$(function () {
+    var jqBar = $('.count'); // селектор для вашего блока
+    var jqBarStatus = true;
+    $(window).scroll(function () {
+        var scrollEvent = ($(window).scrollTop() > (jqBar.position().top - $(window).height()));
+        if (scrollEvent && jqBarStatus) {
+            jqBarStatus = false;
+            /* выполнение скрипта*/
+            $('.count').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 1500,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        }
+    });
+});
+
+var modal = $modal({
+    title: 'В разработке',
+    content: 'Этот сайт не имеет бэкенда<br>Данная функция не работает',
+  });
